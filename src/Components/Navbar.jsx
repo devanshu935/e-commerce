@@ -24,7 +24,7 @@ export const Navbar = () => {
             Home
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             style={({ isActive }) =>
               isActive
                 ? {
@@ -36,7 +36,7 @@ export const Navbar = () => {
             to="/list"
           >
             Products
-          </NavLink>
+          </NavLink> */}
 
         </nav>
       </div>
