@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import Stars from "./Stars";
 
 export const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
+    console.log("Hello");
     fetch('https://my-json-server.typicode.com/devanshu935/e-commerce/items').then(res => res.json()).then(data => setProducts(data));
   }, []);
 
@@ -14,9 +16,15 @@ export const Home = () => {
         {products.map((product, id) => {
           return (
             <div className="item" key={id}>
-              <h3>{product.name}</h3>
-              <img src={product.image} alt={product.name} />
-              <p>{product.description}</p>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <img src={product.image} alt={product.name} />
+                <h4>{product.name}</h4>
+                <p>Rs. {product.price}</p>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '55px' }}>
+                <p>{product.description}</p>
+                <Stars count={product.rating} />
+              </div>
             </div>
           );
         })}

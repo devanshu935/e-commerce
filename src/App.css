@@ -71,20 +71,28 @@ nav a {
 
 .item {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
   padding: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-h3 {
-  align-self: flex-start;
+  font-size: small;
 }
 
 .item img {
   width: 150px;
-  align-self: flex-start;
+}
+
+h4 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+img.stars {
+  width: 20px;
+  height: 20px;
 }
