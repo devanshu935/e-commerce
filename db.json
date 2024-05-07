@@ -1,28 +1,35 @@
 {
-    "items" : [
-        {
-          "id": "1",
-          "name": "iPhone 14 Pro Max",
-          "image": "https://m.media-amazon.com/images/I/610pghkO81L._SX679_.jpg",
-          "price": "14000"
-        },
-        {
-          "id": "2",
-          "name": "Canon 200D",
-          "image": "https://m.media-amazon.com/images/I/914hFeTU2-L._SX450_.jpg",
-          "price": "8000"
-        },
-        {
-          "id": "3",
-          "name": "Macbook Air",
-          "image": "https://m.media-amazon.com/images/I/71eXNIDUGjL._SX679_.jpg",
-          "price": "140000"
-        },
-        {
-          "id": "4",
-          "name": "Samsung S23",
-          "image": "https://m.media-amazon.com/images/I/61RZDb2mQxL._SX679_.jpg",
-          "price": "34000"
-        }
-      ]
+  "items": [
+    {
+      "id": "1",
+      "name": "iPhone 14 Pro Max",
+      "image": "https://m.media-amazon.com/images/I/610pghkO81L._SX679_.jpg",
+      "price": "14000",
+      "description": "The iPhone 14 Pro, released in 2023, features an edge-to-edge OLED display and a powerful A14 Bionic chip, providing faster performance and better battery life than its predecessors. It introduced Face ID technology, which allows users to unlock their phone and authenticate transactions with facial recognition. The device also features a dual-lens camera system with improved portrait mode and optical zoom capabilities.",
+      "rating": 4
+    },
+    {
+      "id": "2",
+      "name": "Canon 200D",
+      "image": "https://m.media-amazon.com/images/I/914hFeTU2-L._SX450_.jpg",
+      "price": "8000",
+      "description": "The Canon 200D, also known as the Rebel SL2, is a compact DSLR camera released in 2017. It features a 24.2 megapixel APS-C sensor and a DIGIC 7 image processor, allowing for improved image quality and faster processing speeds. The camera has a 9-point autofocus system and Dual Pixel CMOS AF technology, which provides accurate and smooth focusing during both photos and videos. It also has a vari-angle touchscreen display and Wi-Fi/NFC connectivity for easy sharing and remote control of the camera.",
+      "rating": 4
+    },
+    {
+      "id": "3",
+      "name": "Macbook Air",
+      "image": "https://m.media-amazon.com/images/I/71eXNIDUGjL._SX679_.jpg",
+      "price": "140000",
+      "description": "The MacBook Air is a popular and lightweight laptop computer produced by Apple. It features a thin and durable aluminum body, with a 13.3-inch Retina display and an M1 chip for fast and efficient performance. The device also has a backlit Magic Keyboard and Touch ID for easy and secure access to the system. The MacBook Air is equipped with up to 16GB of RAM and up to 2TB of storage, making it a suitable choice for a variety of tasks, from web browsing to video editing.",
+      "rating": 4
+    },
+    {
+      "id": "4",
+      "name": "Samsung S23",
+      "image": "https://m.media-amazon.com/images/I/61RZDb2mQxL._SX679_.jpg",
+      "price": "34000",
+      "rating": 4
+    }
+  ]
 }
