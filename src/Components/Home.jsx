@@ -14,13 +14,12 @@ export const Home = () => {
   }
 
   function handleSortClick() {
+    setSorted(!sorted);
     if (!sorted) {
       const sortedProducts = JSON.parse(JSON.stringify(products)).sort((a, b) => a.price - b.price);
-      setSorted(true);
       setProducts(sortedProducts);
       return;
     }
-    setSorted(false);
     fetchProducts();
   }
 
@@ -55,21 +54,25 @@ export const Home = () => {
   return (
     <div className="home page">
       <h3>RapidRetail</h3>
+      <button style={{ display: 'flex', alignItems: 'center', width: 'auto', border: '2px solid black' }} onClick={handleSortClick}>
+        <span style={{ marginRight: '10px' }}>Sort by price</span>
+        {sorted && <img className="clear-filter" alt="clear filter" src="https://cdn-icons-png.flaticon.com/128/6159/6159296.png" />}
+      </button>
+
       <div className="item-list">
-        <button style={{ width: '100px' }} onClick={handleSortClick}>Sort</button>
         {products.map((product, id) => {
           return (
             <div className="item" key={id}>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <img src={product.image} alt={product.name} />
-                {editIndex === product.id ? <input name="name" onChange={(e) => handleDataChange(e)} value={product.name} /> : <h4>{product.name}</h4>}
-                {editIndex === product.id ? <input name="price" onChange={(e) => handleDataChange(e)} value={product.price} /> : <p>Rs. {product.price}</p>}
+                {editIndex === product.id ? <input type="text" required name="name" onChange={(e) => handleDataChange(e)} value={product.name} /> : <h4>{product.name}</h4>}
+                {editIndex === product.id ? <input type="number" required name="price" onChange={(e) => handleDataChange(e)} value={product.price} /> : <p>Rs. {product.price}</p>}
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '55px' }}>
-                {editIndex === product.id ? <textarea onChange={(e) => handleDataChange(e)} style={{ width: '900px', height: '50px' }} name="description" value={product.description} /> : <p>{product.description}</p>}
+                {editIndex === product.id ? <textarea required onChange={(e) => handleDataChange(e)} style={{ width: '900px', height: '50px' }} name="description" value={product.description} /> : <p>{product.description}</p>}
                 {editIndex === product.id ?
                   <label>Rating &nbsp;
-                    <input name="rating" value={product.rating} type="number" min={0} max={5} onChange={(e) => handleDataChange(e)}></input>
+                    <input required name="rating" value={product.rating} type="number" min={0} max={5} onChange={(e) => handleDataChange(e)}></input>
                   </label> : <Stars count={product.rating} />}
               </div>
               {editIndex === product.id ? <button onClick={() => setEditIndex(null)}>Cancel</button> : <img

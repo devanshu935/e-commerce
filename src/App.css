@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -43,7 +43,7 @@ nav a {
   justify-content: center;
 }
 
-.home > img {
+.home>img {
   width: 40vw;
   margin: 0 auto;
 }
@@ -107,6 +107,11 @@ img.edit {
   width: 20px;
   height: 20px;
   align-self: flex-end;
+}
+
+img.clear-filter {
+  width: 20px;
+  height: 20px;
 }
 
 button {
